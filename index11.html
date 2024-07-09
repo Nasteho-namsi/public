@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="stylesheet1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    input:invalid {
+        border-color: rgb(240, 237, 237);
+    }
+    input:valid {
+        border-color: green;
+    }
+</style>
+</head>
+<body>
+  <div class="menu">
+    <section>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+          </form>
+        </div>
+      </nav>
+    </section>
+  </div>
+
+  <section>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block deux" src="./image/n11.jpg" alt="First slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block deux" src="./image/n12.jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block deux" src="./image/n13.jpg" alt="Third slide">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container p-3">
+      <div class="row">
+        <div class="col-md-4 col-xs-12">
+          <div class="card">
+            <div class="card-header text-center"><i class="fa-solid fa-house"></i> Chemise</div>
+            <div class="card-body">
+              <img src="./image/n13.jpg" class="img-thumbnail" alt="">
+            </div>
+            <div class="card-footer">
+              <div class="reseaux-sociaux">
+                <span class="fa fa-facebook"></span>
+                <span class="fa fa-instagram"></span>
+                <span class="fa fa-twitter"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-xs-12">
+          <div class="card">
+            <div class="card-header text-center">Chemise</div>
+            <div class="card-body">
+              <img src="./image/n12.jpg" class="img-thumbnail" alt="">
+            </div>
+            <div class="card-footer">
+              <div class="reseaux-sociaux">
+                <span class="fa fa-facebook"></span>
+                <span class="fa fa-instagram"></span>
+                <span class="fa fa-twitter"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-xs-12">
+          <div class="card">
+            <div class="card-header text-center">Chemise</div>
+            <div class="card-body">
+              <img src="./image/n11.jpg" class="img-thumbnail" alt="">
+            </div>
+            <div class="card-footer">
+              <div class="reseaux-sociaux">
+                <span class="btn btn-primary"> <i class="fa fa-facebook"></i></span>
+                <span class="btn "><i class="fa fa-instagram fa-2x" style="background-color:red"></i></span>
+                <span class="btn btn-info"><i class="fa fa-twitter"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container pt-5">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="./image/n11.jpg" alt="">
+        </div>
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">Formulaire</div>
+            <div class="card-body">
+              <form name="rgval" id="monFormulaire" onsubmit="return validation(); return false;">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="nom">Nom</label>
+                      <input type="text" id="nom" name="nom" class="form-control" placeholder="Saisir votre nom" required>
+                      <span id="msg-error"></span>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="prenom">Prénom</label>
+                      <input type="text" id="prenom" name="prenom" class="form-control" placeholder="Saisir votre prénom" required>
+                      <span id="msgprenom"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label for="telephone">Téléphone</label>
+                      <input type="number" id="telephone" name="telephone" class="form-control" placeholder="Saisir votre téléphone" required>
+                      <span id="msgtelephone"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="jj">JJ</label>
+                      <input type="number" id="jj" name="jj" class="form-control" required>
+                      <span id="msgjj"></span>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="mm">MM</label>
+                      <input type="number" id="mm" name="mm" class="form-control" required>
+                      <span id="msgmm"></span>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="aa">AAAA</label>
+                      <input type="number" id="aa" name="aa" class="form-control" required>
+                      <span id="msgaa"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label for="msger">Message</label>
+                      <textarea id="msger" name="msger" class="form-control" cols="20" rows="5" required></textarea>
+                      <span id="msgmsger"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row text-center">
+                  <div class="col-md-12">
+                    <button type="submit" class="btn btn-primary">Enregistrer</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    const formulaire = document.getElementById('monFormulaire');
+  const champnom = formulaire.querySelector('input[name="nom"]');
+  const champpre = formulaire.querySelector('input[name="prenom"]');
+  const champtel= formulaire.querySelector('input[name="telephone"]');
+  const champjj= formulaire.querySelector('input[name="jj"]');
+  const champmm= formulaire.querySelector('input[name="mm"]');
+  const champaa= formulaire.querySelector('input[name="aaaa"]');
+  const champmsg= formulaire.querySelector('input[name="msger"]');
+  champnom.addEventListener('input', () => {
+      if (champnom.validity.valueMissing) {
+        champnom.setCustomValidity('Ce champ est obligatoire');
+      } else {
+        champnom.setCustomValidity('');
+      }
+  });
+  champpre.addEventListener('input', () => {
+      if (champpre.validity.valueMissing) {
+        champpre.setCustomValidity('Ce champ est obligatoire');
+      } else {
+        champpre.setCustomValidity('');
+      }
+  });
+  champtel.addEventListener('input', () => {
+      if (champtel.validity.valueMissing) {
+        champtel.setCustomValidity('Ce champ est obligatoire');
+      } else {
+        champtel.setCustomValidity('');
+      }
+  });
+  champjj.addEventListener('input', () => {
+      if (champjj.validity.valueMissing) {
+        champjj.setCustomValidity('Ce champ est obligatoire');
+      } else {
+        champjj.setCustomValidity('');
+      }
+  });
+  champmm.addEventListener('input', () => {
+      if (champmm.validity.valueMissing) {
+        champmm.setCustomValidity('Ce champ est obligatoire');
+      } else {
+        champmm.setCustomValidity('');
+      }
+  });
+  champaa.addEventListener('input', () => {
+      if (champaa.validity.valueMissing) {
+        champaa.setCustomValidity('Ce champ est obligatoire');
+      } else {
+        champaa.setCustomValidity('');
+      }
+  });
+  champmsg.addEventListener('input', () => {
+      if (champmsg.validity.valueMissing) {
+        champmsg.setCustomValidity('Ce champ est obligatoire');
+      } else {
+        champmsg.setCustomValidity('');
+      }
+  });
+  </script>
+
+  <!-- <script>
+    function validation() {
+      let msgerror = document.getElementById("msg-error");
+      let msgtelephone = document.getElementById("msgtelephone");
+      let msgprenom = document.getElementById("msgprenom");
+      let msgmm = document.getElementById("msgmm");
+      let msgjj = document.getElementById("msgjj");
+      let msgaa = document.getElementById("msgaa");
+      let msger = document.getElementById("msgmsger");
+      let nom = document.forms["rgval"]["nom"];
+      let prenom = document.forms["rgval"]["prenom"];
+      let telephone = document.forms["rgval"]["telephone"];
+      let jj = document.forms["rgval"]["jj"];
+      let mm = document.forms["rgval"]["mm"];
+      let aa = document.forms["rgval"]["aa"];
+      let message = document.forms["rgval"]["msger"];
+
+      let isValid = true;
+
+      if (nom.value == "") {
+        msgerror.innerHTML = "Veuillez saisir votre nom";
+        msgerror.style.color = "red";
+        document.getElementById("nom").style.border = "1px solid red";
+        isValid = false;
+      } else {
+        msgerror.innerHTML = ""; // Réinitialisation du message d'erreur
+        document.getElementById("nom").style.border = "1px solid green"; // Changement de style pour indiquer que le champ est valide
+      }
+
+      if (prenom.value == "") {
+        msgprenom.innerHTML = "Veuillez saisir votre prénom";
+        msgprenom.style.color = "red";
+        document.getElementById("prenom").style.border = "1px solid red";
+        isValid = false;
+      } else {
+        msgprenom.innerHTML = ""; // Réinitialisation du message d'erreur
+        document.getElementById("prenom").style.border = "1px solid green"; // Changement de style pour indiquer que le champ est valide
+      }
+
+      if (telephone.value == "") {
+        msgtelephone.innerHTML = "Veuillez saisir votre numéro de téléphone";
+        msgtelephone.style.color = "red";
+        document.getElementById("telephone").style.border = "1px solid red";
+        isValid = false;
+      } else {
+        msgtelephone.innerHTML = ""; // Réinitialisation du message d'erreur
+        document.getElementById("telephone").style.border = "1px solid green"; // Changement de style pour indiquer que le champ est valide
+      }
+
+      if (jj.value == "") {
+        msgjj.innerHTML = "Veuillez saisir le jour";
+        msgjj.style.color = "red";
+        document.getElementById("jj").style.border = "1px solid red";
+        isValid = false;
+      } else {
+        msgjj.innerHTML = ""; // Réinitialisation du message d'erreur
+        document.getElementById("jj").style.border = "1px solid green"; // Changement de style pour indiquer que le champ est valide
+      }
+
+      if (mm.value == "") {
+        msgmm.innerHTML = "Veuillez saisir le mois";
+        msgmm.style.color = "red";
+        document.getElementById("mm").style.border = "1px solid red";
+        isValid = false;
+      } else {
+        msgmm.innerHTML = ""; // Réinitialisation du message d'erreur
+        document.getElementById("mm").style.border = "1px solid green"; // Changement de style pour indiquer que le champ est valide
+      }
+
+      if (aa.value == "") {
+        msgaa.innerHTML = "Veuillez saisir l'année";
+        msgaa.style.color = "red";
+        document.getElementById("aa").style.border = "1px solid red";
+        isValid = false;
+      } else {
+        msgaa.innerHTML = ""; // Réinitialisation du message d'erreur
+        document.getElementById("aa").style.border = "1px solid green"; // Changement de style pour indiquer que le champ est valide
+      }
+
+      if (message.value == "") {
+        msger.innerHTML = "Veuillez saisir un message";
+        msger.style.color = "red";
+        document.getElementById("msger").style.border = "1px solid red";
+        isValid = false;
+      } else {
+        msger.innerHTML = ""; // Réinitialisation du message d'erreur
+        document.getElementById("msger").style.border = "1px solid green"; // Changement de style pour indiquer que le champ est valide
+      }
+
+      // Affichage du message de succès si toutes les validations sont réussies
+      if (isValid) {
+        alert("Formulaire soumis avec succès !");
+        // Optionnel : Réinitialisation des champs après soumission
+        document.getElementById("nom").value = "";
+        document.getElementById("prenom").value = "";
+        document.getElementById("telephone").value = "";
+        document.getElementById("jj").value = "";
+        document.getElementById("mm").value = "";
+        document.getElementById("aa").value = "";
+        document.getElementById("msger").value = "";
+      }
+
+      return isValid;
+    } -->
+  <!-- </script> -->
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
